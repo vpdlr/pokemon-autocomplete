@@ -10,9 +10,6 @@ const Autocomplete: React.FC = () => {
   const [suggestions, setSuggestions] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const clickedRef = useRef(false);
-  
-  // Ref for input (if we need to focus or clear it)
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -71,7 +68,6 @@ const Autocomplete: React.FC = () => {
       <div className="autocomplete-title">Search por Pokémon</div>
       <input
         type="text"
-        ref={inputRef}
         value={inputValue}
         onChange={handleChange}
         placeholder="Search for Pokémon..."
