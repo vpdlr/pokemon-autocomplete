@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Autocomplete Pokémon Search
+This is a simple autocomplete search component built in React that allows users to search for Pokémon names. As users type, the list of Pokémon updates dynamically, filtering based on their input. The suggestions come from the Pokémon API, providing a large selection of Pokémon names.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+- **Autocomplete Search:** As you type, suggestions update based on the beginning of Pokémon names.
+- **Debounced Input:** To improve performance, a 300ms debounce delay is applied to the search.
+- **Clickable Suggestions:** You can click a suggestion to autofill the input with the selected Pokémon’s name.
+- **Loading Indicator:** A loading indicator is shown while the data is being fetched from the API.
 
-In the project directory, you can run:
+## How it Works
+The component fetches Pokémon data from the Pokémon API, which provides a list of Pokémon (with their names). The API returns up to 1000 Pokémon, which are filtered dynamically based on the user’s search query.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run this project locally, follow these steps:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+```bash
+git clone https://github.com/yourusername/pokemon-autocomplete.git
+````
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
 
-### `npm run build`
+```bash
+cd pokemon-autocomplete
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server:
 
-### `npm run eject`
+```bash
+npm start
+```
+Your app will be available at http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Testing it Out
+You can test the autocomplete search by typing any of the following Pokémon names:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- pikachu
+- charmander
+- bulbasaur
+- squirtle
+- jigglypuff
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+These names are a few examples from the Pokémon API and should appear as suggestions once you begin typing.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React:** A JavaScript library for building user interfaces.
+- **Pokémon API:** Provides Pokémon data including names and URLs.
+- **CSS:** Basic styling for the search component.
